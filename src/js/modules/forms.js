@@ -40,9 +40,9 @@ const forms = (state) => {
             const formData = new FormData(item);
             if (item.getAttribute('data-calc') === "end") {
                 for (let key in state) {
-                    formData.append(key, state[key])
-                }
-            }
+                    formData.append(key, state[key]);
+                };
+            };
 
             postData('assets/server.php', formData)
                 .then(res => {
